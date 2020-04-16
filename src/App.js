@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './Home';
+import Home from './Components/Options/Home';
+import BurgerButton from './Components/SideDrawer/BurgerButton';
+//import SideDrawer from './Components/SideDrawer/SideDrawer';
 
 class App extends Component {
   render() {
     return (
-        <div>
-          <Home />
+        <div style={{height: '100%'}}>
           <head>
             <title>Judy Zhang</title>
           </head>
-          <body>
-          </body>
+          <Home />
+          <BurgerButton />
         </div>
     );
   }

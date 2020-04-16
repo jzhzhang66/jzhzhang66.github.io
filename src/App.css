@@ -1,93 +1,61 @@
-
-.cover {
-	position: fixed;
-	width: 100%;
+html {
 	height: 100%;
-	background-size: contain;
 }
 
 body {
 	margin: 0;
-}
-
-li {
-	float: left;
-	display: block;
-	padding: 55px;
-	font-family: "Courier";
-	font-size: 20px;
-	color: white;
-	padding-left: 200px;
-}
-
-
-/* Position and sizing of burger button */
-.bm-burger-button {
-	position: fixed;
-	width: 40px;
-	height: 40px;
-	left: 40px;
-	top: 40px;
-  }
-  
-  /* Color/shape of burger icon bars */
-  .bm-burger-bars {
-	/*background: #a6bed4;*/
-	background: #dac8b2
-  }
-  
-  /* Color/shape of burger icon bars on hover*/
-  .bm-burger-bars-hover {
-	/*background: #304552;*/
-	background: #332820;
-  }
-
-  /* Color/shape of close button cross */
-  .bm-cross {
-	/*background: #aac5d6;*/
-	background: #dac8b2;
-  }
-  
-  /*
-  Sidebar wrapper styles
-  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-  */
-  .bm-menu-wrap {
-	position: fixed;
+	padding: 0;
 	height: 100%;
-  }
-  
-  /* General sidebar styles */
-  .bm-menu {
-	background: #332820;
-	/*background: #212f38;*/
-	padding: 1.5em 1em 0;
-	font-size: 1.75em;
-	opacity: 70%;
-  }
-  
-  /* Wrapper for item list */
-  .bm-item-list {
-	color: #b8b7ad;
-	padding: 0.8em;
-  }
-  
-  /* Individual item */
-  .bm-item {
-	display: inline-block;
-	padding-bottom: 25px;
-	font-family: 'Playfair Display SC', serif;
-	text-decoration: none;
-	font-size: 30px;
-	color: white;
-  }
-
-a:hover {
-	/*color: #a6bed4;*/
-	  color: #dac8b2;
 }
-  
-  /* Styling of overlay */
-  .bm-overlay {
-	background: rgba(0, 0, 0, 0.3);
-  }
+
+.image-box-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.image-box-logo {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 150px;
+}
+
+.burger-button {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 30px;
+	width: 36px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 2;
+	top: 40px;
+	left: 50px;
+}
+
+.burger-button:focus {
+	outline: none;
+}
+
+.burger-button-line {
+	width: 36px;
+	height: 3px;
+	background: white;
+}
+
+.side-drawer {
+	height: 100%;
+	width: 300px;
+	background: rgb(80, 60, 34);
+	opacity: 70%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
