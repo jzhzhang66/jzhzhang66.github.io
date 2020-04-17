@@ -14,7 +14,8 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  background-size: cover no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .image-box-logo {
