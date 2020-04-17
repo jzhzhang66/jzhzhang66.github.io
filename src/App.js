@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from './Components/Options/Home';
 import BurgerButton from './Components/SideDrawer/BurgerButton';
-import SideDrawer from './Components/SideDrawer/SideDrawer';
-import Backdrop from './Components/Backdrop/Backdrop';
+
 
 class App extends Component {
   render() {
@@ -14,8 +13,6 @@ class App extends Component {
           </head>
           <Home />
           <BurgerButton />
-          <SideDrawer />
-          <Backdrop /> 
         </div>
     );
   }
