@@ -6,25 +6,87 @@ class SideNav extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            hovering: false
+            overallHovering: false,
+            headerHovering: false,
+            urbanHovering: false,
+            landscapeHovering: false,
+            portraitHovering: false
         }
-        this.setHovering = this.setHovering.bind(this);
-        this.setNotHovering = this.setNotHovering.bind(this);
+        this.setHeaderHovering = this.setHeaderHovering.bind(this);
+        this.setHeaderNotHovering = this.setHeaderNotHovering.bind(this);
+        this.setOptionHovering = this.setOptionHovering.bind(this);
+        this.setOptionNotHovering = this.setOptionNotHovering.bind(this);
+        this.setOverallHovering = this.setOverallHovering.bind(this);
     }
 
-    setHovering() {
+    setHeaderHovering() {
         this.setState(() => {
             return {
-                hovering: true
+                headerHovering: true
             }
         })
-
     }
 
-    setNotHovering() {
+    setHeaderNotHovering() {
         this.setState(() => {
             return {
-                hovering: false
+                headerHovering: false
+            }
+        })
+    }
+
+   setOptionHovering = option => {
+        if (option === "Urban") {
+            this.setState(() => {
+                return {
+                    urbanHovering: true
+                }
+            })
+        }
+        if (option === "Landscape") {
+            this.setState(() => {
+                return {
+                    landscapeHovering: true
+                }
+            })
+        }
+        if (option === "Portrait") {
+            this.setState(() => {
+                return {
+                    portraitHovering: true
+                }
+            })
+        }
+    }
+
+    setOptionNotHovering = option => {
+        if (option === "Urban") {
+            this.setState(() => {
+                return {
+                    urbanHovering: false
+                }
+            })
+        }
+        if (option === "Landscape") {
+            this.setState(() => {
+                return {
+                    landscapeHovering: false
+                }
+            })
+        }
+        if (option === "Portrait") {
+            this.setState(() => {
+                return {
+                    portraitHovering: false
+                }
+            })
+        }
+    }
+
+    setOverallHovering() {
+        this.setState(() => {
+            return {
+                overallHovering: this.state.headerHovering || this.state.urbanHovering || this.state.landscapeHovering || this.state.portraitHovering ? true : false
             }
         })
     }
@@ -32,13 +94,19 @@ class SideNav extends React.Component {
     dropDown() {
         return (
             <ul>
-                <Link to="/Gallery/Urban">
+                <Link onMouseOver={this.setOptionHovering("Urban"), this.setOverallHovering}
+                    onMouseOut={this.setOptionNotHovering("Urban"), this.setOverallHovering}
+                    to="/Gallery/Urban">
                     <li className="drop-down">Urban</li>
                 </Link>
-                <Link to="/Gallery/Landscape">
+                <Link onMouseOver={this.setOptionHovering("Landscape"), this.setOverallHovering}
+                    onMouseOut={this.setOptionNotHovering("Landscape"), this.setOverallHovering}
+                    to="/Gallery/Landscape">
                     <li className="drop-down">Landscape</li>
                 </Link>
-                <Link to="/Gallery/Portraits">
+                <Link onMouseOver={this.setOptionHovering("Portrait"), this.setOverallHovering}
+                    onMouseOut={this.setOptionNotHovering("Portrait"), this.setOverallHovering}
+                    to="/Gallery/Portraits">
                     <li className="drop-down">Portraits</li>
                 </Link>
             </ul>
@@ -54,10 +122,10 @@ class SideNav extends React.Component {
                 <Link to="/AboutMe">
                     <li>About Me</li>
                 </Link>
-                <Link onMouseOver={this.setHovering}
-                    onMouseOut={this.setNotHovering}>
+                <Link onMouseOver={this.setHeaderHovering, this.setOverallHovering}
+                    onMouseOut={this.setHeaderNotHovering, this.setOverallHovering}>
                     <li>Gallery</li>
-                    {this.state.hovering ? this.dropDown() : ""}
+                    {this.state.overallHovering ? this.dropDown() : ""}
                 </Link>
                 <Link to="/Contact">
                     <li>Contact</li>
