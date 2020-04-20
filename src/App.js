@@ -3,8 +3,9 @@ import './App.css';
 import Home from './Components/Options/Home';
 import AboutMe from './Components/Options/AboutMe';
 import Contact from './Components/Options/Contact';
-import Gallery from './Components/Options/Gallery';
-import BurgerButton from './Components/SideNav/BurgerButton';
+import Landscape from './Components/Options/Gallery/Landscape';
+import Portrait from './Components/Options/Gallery/Portrait';
+import Urban from './Components/Options/Gallery/Urban';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
@@ -19,7 +20,9 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/AboutMe" component={AboutMe} />
             <Route path="/Contact" component={Contact} />
-            <Route path="/Gallery" component={Gallery} />
+            <Route path="/Gallery/Landscape" component={Landscape} />
+            <Route path="/Gallery/Portrait" component={Portrait} />
+            <Route path="/Gallery/Urban" component={Urban} />
           </Switch>
         </div>
     );

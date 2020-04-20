@@ -104,6 +104,10 @@ body {
 	color: #dac8b2;
 }
 
+.drop-down {
+	font-size: 25px;
+}
+
 .backdrop {
 	top: 0;
 	left: 0;

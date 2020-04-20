@@ -12,19 +12,9 @@ class SideNav extends React.Component {
         this.setNotHovering = this.setNotHovering.bind(this);
     }
 
-    dropDown() {
-        return (
-            <ul>
-                <li>City</li>
-                <li>Nature</li>
-                <li>Portraits</li>
-            </ul>
-        )
-    }
-
     setHovering() {
         this.setState(() => {
-            return {            
+            return {
                 hovering: true
             }
         })
@@ -33,10 +23,26 @@ class SideNav extends React.Component {
 
     setNotHovering() {
         this.setState(() => {
-            return {            
+            return {
                 hovering: false
             }
         })
+    }
+
+    dropDown() {
+        return (
+            <ul>
+                <Link to="/Gallery/Urban">
+                    <li className="drop-down">Urban</li>
+                </Link>
+                <Link to="/Gallery/Landscape">
+                    <li className="drop-down">Landscape</li>
+                </Link>
+                <Link to="/Gallery/Portraits">
+                    <li className="drop-down">Portraits</li>
+                </Link>
+            </ul>
+        )
     }
 
     toRender() {
@@ -48,7 +54,7 @@ class SideNav extends React.Component {
                 <Link to="/AboutMe">
                     <li>About Me</li>
                 </Link>
-                <Link onMouseOver={this.setHovering} 
+                <Link onMouseOver={this.setHovering}
                     onMouseOut={this.setNotHovering}>
                     <li>Gallery</li>
                     {this.state.hovering ? this.dropDown() : ""}
