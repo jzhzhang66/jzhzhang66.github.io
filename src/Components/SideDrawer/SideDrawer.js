@@ -1,18 +1,26 @@
 import React from 'react';
 import '../../App.css';
-
+import { Link } from 'react-router-dom';
 class SideDrawer extends React.Component {
 
     toRender() {
-         return (
-         <ul>
-             <li><a href="/">Home</a></li>
-             <li><a href="/">About Me</a></li>
-             <li><a href="/">Gallery</a></li>
-             <li><a href="/">Contact</a></li>
-         </ul>
-         )
-     }
+        return (
+            <ul>
+                <Link to="/">
+                    <li><a href="/">Home</a></li>
+                </Link>
+                <Link to="/AboutMe">
+                    <li><a href="/AboutMe">About Me</a></li>
+                </Link>
+                <Link to="/Gallery">
+                    <li><a href="/Gallery">Gallery</a></li>
+                </Link>
+                <Link to="/Contact">
+                    <li><a href="/Contact">Contact</a></li>
+                </Link>
+            </ul>
+        )
+    }
 
     render() {
         return (

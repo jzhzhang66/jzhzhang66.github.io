@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import Contact from './Components/Options/Contact';
+import AboutMe from './Components/Options/AboutMe';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
