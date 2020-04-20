@@ -1,14 +1,14 @@
 import React from 'react';
 import '../../App.css';
-import SideDrawer from './SideDrawer';
+import SideNav from './SideNav';
 import Backdrop from '../Backdrop/Backdrop';
 
 class BurgerButton extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            className: "burger-button-line",
-            openDrawer: false
+            onHover: false,
+            openNav: false
         }
         this.burgerButtonHover = this.burgerButtonHover.bind(this)
         this.burgerButtonNoHover = this.burgerButtonNoHover.bind(this)
@@ -19,7 +19,7 @@ class BurgerButton extends React.Component {
     burgerButtonHover() {
         this.setState(() => {
             return {
-                className: "burger-button-line-hover"
+                onHover: true
             }
         })
     }
@@ -27,7 +27,7 @@ class BurgerButton extends React.Component {
     burgerButtonNoHover() {
         this.setState(() => {
             return {
-                className: "burger-button-line"
+                onHover: false
             }
         })
     }
@@ -35,7 +35,7 @@ class BurgerButton extends React.Component {
     burgerButtonClicked() {
         this.setState(() => {
             return {
-                openDrawer: true
+                openNav: true
             }
         })
     }
@@ -43,7 +43,7 @@ class BurgerButton extends React.Component {
     handleBackdropClick() {
         this.setState(() => {
             return {
-                openDrawer: false
+                openNav: false
             }
         })
     }
@@ -51,18 +51,18 @@ class BurgerButton extends React.Component {
     render() {
         return (
             <div>
-                <button className={this.state.openDrawer ? "" : "burger-button"}
+                <button className={this.state.openNav ? "burger-button-hidden" : "burger-button"}
                     onClick={this.burgerButtonClicked}
                     onMouseOver={this.burgerButtonHover}
                     onMouseOut={this.burgerButtonNoHover}>
 
-                    <div className={this.state.className} />
-                    <div className={this.state.className} />
-                    <div className={this.state.className} />
+                    <div className={this.state.onHover ? "burger-button-line-hover" : "burger-button-line"} />
+                    <div className={this.state.onHover ? "burger-button-line-hover" : "burger-button-line"} />
+                    <div className={this.state.onHover ? "burger-button-line-hover" : "burger-button-line"} />
 
                 </button>
-                <SideDrawer openDrawer={this.state.openDrawer} />
-                <Backdrop openBackdrop={this.state.openDrawer} handleBackdropClick={this.handleBackdropClick.bind(this)}/>
+                <SideNav openNav={this.state.openNav} />
+                <Backdrop openBackdrop={this.state.openNav} handleBackdropClick={this.handleBackdropClick.bind(this)}/>
             </div>
         )
     }

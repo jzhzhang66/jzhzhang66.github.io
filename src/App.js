@@ -4,7 +4,7 @@ import Home from './Components/Options/Home';
 import AboutMe from './Components/Options/AboutMe';
 import Contact from './Components/Options/Contact';
 import Gallery from './Components/Options/Gallery';
-import BurgerButton from './Components/SideDrawer/BurgerButton';
+import BurgerButton from './Components/SideNav/BurgerButton';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
@@ -21,7 +21,6 @@ class App extends Component {
             <Route path="/Contact" component={Contact} />
             <Route path="/Gallery" component={Gallery} />
           </Switch>
-          <BurgerButton />
         </div>
     );
   }

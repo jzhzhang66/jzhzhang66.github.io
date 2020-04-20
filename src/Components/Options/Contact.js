@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.css';
-import BurgerButton from '../SideDrawer/BurgerButton';
+import BurgerButton from '../SideNav/BurgerButton';
 
 class Contact extends React.Component {
     render() {

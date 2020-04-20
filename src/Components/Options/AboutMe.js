@@ -1,5 +1,5 @@
 import React from 'react';
-import BurgerButton from '../SideDrawer/BurgerButton';
+import BurgerButton from '../SideNav/BurgerButton';
 import Profile from '../../Images/Profile.jpg';
 import '../../App.css';
 

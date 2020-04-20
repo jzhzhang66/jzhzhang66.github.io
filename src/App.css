@@ -49,6 +49,10 @@ body {
 	outline: none;
 }
 
+.burger-button-hidden {
+	display: none;
+}
+
 .burger-button-line {
 	width: 36px;
 	height: 3px;
@@ -61,7 +65,7 @@ body {
 	background: black;
 }
 
-.side-drawer {
+.side-nav {
 	height: 100%;
 	width: 23%;
 	background: rgb(0, 0, 0);
@@ -72,7 +76,7 @@ body {
 	z-index: 200;
 }
 
-.side-drawer ul {
+.side-nav ul {
 	height: 100%;
 	list-style: none;
 	display: flex;
@@ -82,13 +86,13 @@ body {
 	
 }
 
-.side-drawer li {
+.side-nav li {
 	margin: 10px;
 	padding: 10px;
 	
 }
 
-.side-drawer a {
+.side-nav a {
 	color: white;
 	text-decoration: none;
 	font-size: 35px;
@@ -96,7 +100,7 @@ body {
 	font-weight: lighter;
 }
 
-.side-drawer a:hover {
+.side-nav li:hover {
 	color: #dac8b2;
 }
 
@@ -162,4 +166,5 @@ body {
 	border-radius: 50%;
 	padding: 80%;
 }
+
 
