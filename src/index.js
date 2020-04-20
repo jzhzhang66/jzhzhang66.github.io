@@ -4,10 +4,13 @@ import App from './App';
 import Contact from './Components/Options/Contact';
 import AboutMe from './Components/Options/AboutMe';
 import * as serviceWorker from './serviceWorker';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Router>
     <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

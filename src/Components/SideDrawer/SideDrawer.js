@@ -7,16 +7,16 @@ class SideDrawer extends React.Component {
         return (
             <ul>
                 <Link to="/">
-                    <li><a href="/">Home</a></li>
+                    <li>Home</li>
                 </Link>
                 <Link to="/AboutMe">
-                    <li><a href="/AboutMe">About Me</a></li>
+                    <li>About Me</li>
                 </Link>
                 <Link to="/Gallery">
-                    <li><a href="/Gallery">Gallery</a></li>
+                    <li>Gallery</li>
                 </Link>
                 <Link to="/Contact">
-                    <li><a href="/Contact">Contact</a></li>
+                    <li>Contact</li>
                 </Link>
             </ul>
         )

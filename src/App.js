@@ -7,23 +7,22 @@ import Gallery from './Components/Options/Gallery';
 import BurgerButton from './Components/SideDrawer/BurgerButton';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+
 class App extends Component {
   render() {
     return (
-      <Router>
         <div style={{ height: '100%' }}>
           <head>
             <title>Judy Zhang</title>
           </head>
           <Switch>
-            <Route path="/" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route path="/AboutMe" component={AboutMe} />
             <Route path="/Contact" component={Contact} />
             <Route path="/Gallery" component={Gallery} />
           </Switch>
           <BurgerButton />
         </div>
-      </Router>
     );
   }
 }
