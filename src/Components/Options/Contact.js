@@ -3,6 +3,7 @@ import '../../App.css';
 import BurgerButton from '../SideNav/BurgerButton';
 
 class Contact extends React.Component {
+
     render() {
         return (
             <div>

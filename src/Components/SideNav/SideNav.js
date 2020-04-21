@@ -28,8 +28,8 @@ class SideNav extends React.Component {
                 <Link to="/Gallery/Landscape">
                     <li className="drop-down">Landscape</li>
                 </Link>
-                <Link to="/Gallery/Portraits">
-                    <li className="drop-down">Portraits</li>
+                <Link to="/Gallery/Portrait">
+                    <li className="drop-down">Portrait</li>
                 </Link>
             </ul>
         )
