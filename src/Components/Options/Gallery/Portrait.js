@@ -6,8 +6,10 @@ class Portrait extends React.Component {
 
     render() {
         const style = {
-            height: '100%',
-            width: '100%'
+            maxHeight: '110%',
+            width: '100%',
+            position: 'fixed',
+            filter: 'brightness(50%)'
         }
         
         return (
