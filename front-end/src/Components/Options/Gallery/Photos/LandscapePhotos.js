@@ -2,7 +2,6 @@ import React from 'react';
 import '../../../../App.css';
 import BurgerButton from '../../../SideNav/BurgerButton';
 import { getPhotoLinks } from '../../../../utils';
-import PhotoMount from './PhotoMount';
 import JustifiedGrid from 'react-justified-grid'
 
 class LandscapePhotos extends React.Component {
@@ -27,10 +26,8 @@ class LandscapePhotos extends React.Component {
                 return {
                     images: photos
                 }
-            }
-            )
-        }
-        )
+            })
+        })
     }
 
     render() {
