@@ -10,7 +10,7 @@ import LandscapePhotos from './Components/Options/Gallery/Photos/LandscapePhotos
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-    <LandscapePhotos />
+    <App />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

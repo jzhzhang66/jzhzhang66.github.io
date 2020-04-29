@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../App.css';
+import {Link} from 'react-router-dom';
 
 class TriangleButton extends React.Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class TriangleButton extends React.Component {
     
     render() {
         return (
-            <button className="triangle-button" />
+            <Link to="/Gallery/Landscape/Photos" className="triangle-button" />
         )
     }
 }

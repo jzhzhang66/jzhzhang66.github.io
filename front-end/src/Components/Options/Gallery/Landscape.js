@@ -21,7 +21,6 @@ class Landscape extends React.Component {
     }
 
     render() {
-        
         return (
             <div>
                 <BurgerButton />
