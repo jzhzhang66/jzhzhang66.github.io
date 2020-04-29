@@ -9,19 +9,9 @@ import Urban from './Components/Options/Gallery/Urban';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import axios from 'axios'
 
-async function getAlbum(id) {
-  const response = await axios.get(`https://photos.app.goo.gl/${id}`, {headers: {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-    }})
-  console.log(response.data)
-  //return response.data
- }
-
 class App extends Component {
 
   render() {
-    getAlbum("be3E4cTRwJ3h9A7G6");
     return (
         <div style={{ height: '100%' }}>
           <head>
