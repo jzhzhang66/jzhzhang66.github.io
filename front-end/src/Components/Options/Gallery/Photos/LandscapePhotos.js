@@ -1,33 +1,50 @@
 import React from 'react';
 import '../../../../App.css';
-import BurgerButton from '../../SideNav/BurgerButton';
-import { getPhotoLinks } from '../../../utils';
+import BurgerButton from '../../../SideNav/BurgerButton';
+import { getPhotoLinks } from '../../../../utils';
+import PhotoMount from './PhotoMount';
+import JustifiedGrid from 'react-justified-grid'
 
 class LandscapePhotos extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            links: []
+            images: []
         }
     }
 
     componentDidMount() {
         getPhotoLinks('landscape').then((res) => {
-            this.setState({
-                links: res
-            });
-        });
+            const photos = res.map((link) => {
+                return {
+                    src: link,
+                    width: 700,
+                    height: 500
+                }
+            })
+            this.setState(() => {
+                return {
+                    images: photos
+                }
+            }
+            )
+        }
+        )
     }
 
     render() {
-        <div>
-            <BurgerButton />
+        return (
             <div>
-                {this.state.links.map((link, index) => {
-                    return <img key={index} src={link} />;
-                })}
+                <BurgerButton />
+                <JustifiedGrid
+                    images={this.state.images}
+                    rows={500}
+                    maxRowHeight={900}
+                    gutter={1} />
             </div>
-        </div>
-    }
+        )
+    };
 }
+
+export default LandscapePhotos;

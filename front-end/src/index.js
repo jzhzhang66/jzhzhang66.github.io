@@ -5,11 +5,12 @@ import Contact from './Components/Options/Contact';
 import AboutMe from './Components/Options/AboutMe';
 import * as serviceWorker from './serviceWorker';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import LandscapePhotos from './Components/Options/Gallery/Photos/LandscapePhotos';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-    <App />
+    <LandscapePhotos />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
