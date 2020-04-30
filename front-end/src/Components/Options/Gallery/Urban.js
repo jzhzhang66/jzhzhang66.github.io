@@ -13,7 +13,7 @@ class Urban extends React.Component {
                     <img src={UrbanCover} alt="" />
                     <h1>URBAN</h1>
                 </div>
-                <TriangleButton />
+                <TriangleButton album="Urban" />
             </div>
         )
     }

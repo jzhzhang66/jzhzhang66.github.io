@@ -9,6 +9,8 @@ import Urban from './Components/Options/Gallery/Urban';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import axios from 'axios'
 import LandscapePhotos from './Components/Options/Gallery/Photos/LandscapePhotos';
+import PortraitPhotos from './Components/Options/Gallery/Photos/PortraitPhotos';
+import UrbanPhotos from './Components/Options/Gallery/Photos/UrbanPhotos';
 
 class App extends Component {
 
@@ -26,6 +28,8 @@ class App extends Component {
             <Route path="/Gallery/Portrait" component={Portrait} />
             <Route path="/Gallery/Urban" component={Urban} />
             <Route path="/Gallery/Landscape/Photos" component={LandscapePhotos} />
+            <Route path="/Gallery/Portrait/Photos" component={PortraitPhotos} />
+            <Route path="/Gallery/Urban/Photos" component={UrbanPhotos} />
           </Switch>
         </div>
     );

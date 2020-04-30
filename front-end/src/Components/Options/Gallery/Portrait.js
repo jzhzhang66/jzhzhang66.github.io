@@ -14,7 +14,7 @@ class Portrait extends React.Component {
                     <img src={PortraitCover} alt="" />
                     <h1>Portrait</h1>
                 </div>
-                <TriangleButton />
+                <TriangleButton album="Portrait" />
             </div>
         )
     }

@@ -28,7 +28,7 @@ class Landscape extends React.Component {
                     <img src={LandscapeCover} alt="" />
                     <h1>LANDSCAPE</h1>
                 </div>
-                <TriangleButton />
+                <TriangleButton album="Landscape"/>
             </div>
         )
     }

@@ -3,16 +3,20 @@ import '../../App.css';
 import {Link} from 'react-router-dom';
 
 class TriangleButton extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            album: ''
-        }
-    }
-    
+
     render() {
+        var albumLink;
+        if (this.props.album === "Landscape") {
+            albumLink = "/Gallery/Landscape/Photos"
+        }
+        else if (this.props.album === "Portrait") {
+            albumLink = "/Gallery/Portrait/Photos"
+        }
+        else if (this.props.album === "Urban") {
+            albumLink = "/Gallery/Urban/Photos"
+        }
         return (
-            <Link to="/Gallery/Landscape/Photos" className="triangle-button" />
+            <Link to={albumLink} className="triangle-button" />
         )
     }
 }
