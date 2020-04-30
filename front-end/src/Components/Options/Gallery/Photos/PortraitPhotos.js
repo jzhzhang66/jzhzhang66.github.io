@@ -29,7 +29,7 @@ class PortraitPhotos extends React.Component {
                 <BurgerButton />
                 <JustifiedGrid
                     images={this.state.images}
-                    rows={500}
+                    rows={10000}
                     maxRowHeight={900}
                     gutter={1} />
             </div>
