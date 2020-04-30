@@ -2,6 +2,7 @@ import React from 'react';
 import '../../App.css';
 import SideNav from './SideNav';
 import Backdrop from '../Backdrop/Backdrop';
+import { motion } from "framer-motion";
 
 class BurgerButton extends React.Component {
     constructor(props) {
@@ -50,8 +51,8 @@ class BurgerButton extends React.Component {
 
     render() {
         return (
-            <div>
-                <button className={this.state.openNav ? "burger-button-hidden" : "burger-button"}
+            <div >
+                <motion.button whileHover={{ scale: 1.3 }} className={this.state.openNav ? "burger-button-hidden" : "burger-button"}
                     onClick={this.burgerButtonClicked}
                     onMouseOver={this.burgerButtonHover}
                     onMouseOut={this.burgerButtonNoHover}>
@@ -60,7 +61,7 @@ class BurgerButton extends React.Component {
                     <div className={this.state.onHover ? "burger-button-line-hover" : "burger-button-line"} />
                     <div className={this.state.onHover ? "burger-button-line-hover" : "burger-button-line"} />
 
-                </button>
+                </motion.button>
                 <SideNav openNav={this.state.openNav} />
                 <Backdrop openBackdrop={this.state.openNav} handleBackdropClick={this.handleBackdropClick.bind(this)}/>
             </div>
