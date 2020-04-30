@@ -25,8 +25,8 @@ class App extends Component {
             <Route path="/AboutMe" component={AboutMe} />
             <Route path="/Contact" component={Contact} />
             <Route exact path="/Gallery/Landscape" component={Landscape} />
-            <Route path="/Gallery/Portrait" component={Portrait} />
-            <Route path="/Gallery/Urban" component={Urban} />
+            <Route exact path="/Gallery/Portrait" component={Portrait} />
+            <Route exact path="/Gallery/Urban" component={Urban} />
             <Route path="/Gallery/Landscape/Photos" component={LandscapePhotos} />
             <Route path="/Gallery/Portrait/Photos" component={PortraitPhotos} />
             <Route path="/Gallery/Urban/Photos" component={UrbanPhotos} />
@@ -37,4 +37,3 @@ class App extends Component {
 }
 
 export default App;
-//<a href='https://photos.google.com/share/AF1QipP6osiTbEsFWcStmR3uIph_l_kK1MIKEnfeSymYiPlTh4Eqg_dySZe4GFOWezbaPg?key=cEQ5dTJLWXpOZnZPUDJBSXpFZFdGZ3Fpb2hEZkVn&source=ctrlq.org'><img src='https://lh3.googleusercontent.com/mti0ljq2KJlgOnOYaqw1JLaStNmxT5H4cqOz0qOEg3CvK1CB3ZZPuFL3xks9mM2Q_9v32Wnr3hNkxKRnHK8OAXmTcpJm1paHk22YGDqZlPkkll_OdsEhGJUIrog6G-Y66KVw7PSGjvM=w2400' /></a>

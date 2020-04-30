@@ -16,25 +16,27 @@ app.use(function (req, res, next) {
   next();
 });
 
-// set the home page route
+// set the urban page route
+app.get('/urban', async function (req, res) {
+  const urban = await getAlbum("M1AKVxTSztbtotjy9");
+  // ejs render automatically looks in the views folder
+  const data = extractPhotos(urban);
+  res.json(data);
+});
+
+// set the landscape page route
 app.get('/landscape', async function (req, res) {
   const landscape = await getAlbum("be3E4cTRwJ3h9A7G6");
   // ejs render automatically looks in the views folder
   const data = extractPhotos(landscape);
- /* const metadata = data.map((link) => {
-    urlMetadata(link) 
-  })
-  urlMetadata('https://lh3.googleusercontent.com/DRhkd8rawQqRAGzmgR8OBsxsYWEPrZjb2CvxxYC62Q5MXKDX2P0A51d1Miv5w-1hjOF4KcA8-L32LffoujtONAya1AAzdLIR4oZwK10KJDuTTm9-2v3ieCTFQTcBIGoLuzV54WAQTZs').then(
-    function (metadata) { // success handler
-      console.log(metadata)
-    },
-    function (error) { // failure handler
-      console.log(error)
-    }
-  )
-  // waits until all promises inside metadata are resolved 
-  await Promise.all(metadata);
-  console.log(metadata);*/
+  res.json(data);
+});
+
+// set the portrait page route
+app.get('/portrait', async function (req, res) {
+  const portrait = await getAlbum("PGHptTMPCfyiwZq18");
+  // ejs render automatically looks in the views folder
+  const data = extractPhotos(portrait);
   res.json(data);
 });
 
