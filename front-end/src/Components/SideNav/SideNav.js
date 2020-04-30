@@ -57,7 +57,7 @@ class SideNav extends React.Component {
 
     render() {
         return (
-            <nav className={this.props.openNav ? "side-nav" : ""}>
+            <nav className={this.props.openNav ? "side-nav" : ""} style={this.props.openNav ? {opacity:'60%'} : {opcaity: '0%'}}>
                 {this.props.openNav ? this.toRender() : ""}
             </nav>
         )
