@@ -15,16 +15,9 @@ class LandscapePhotos extends React.Component {
 
     componentDidMount() {
         getPhotoLinks('landscape').then((res) => {
-            const photos = res.map((link) => {
-                return {
-                    src: link,
-                    width: 700,
-                    height: 500
-                }
-            })
             this.setState(() => {
                 return {
-                    images: photos
+                    images: res
                 }
             })
         })

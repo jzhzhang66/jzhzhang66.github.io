@@ -1,24 +1,20 @@
 import React from 'react';
 import BurgerButton from '../../SideNav/BurgerButton';
 import PortraitCover from '../../../Images/PortraitCover.jpg';
+import TriangleButton from '../../TriangleButton/TriangleButton';
 
 class Portrait extends React.Component {
 
     render() {
-        const style = {
-            maxHeight: '115%',
-            width: '100%',
-            position: 'fixed',
-            filter: 'brightness(50%)'
-        }
-        
+
         return (
             <div>
                 <BurgerButton />
                 <div className="portrait-container">
-                    <img src={PortraitCover} alt="" style={style} />
+                    <img src={PortraitCover} alt="" />
                     <h1>Portrait</h1>
                 </div>
+                <TriangleButton />
             </div>
         )
     }
