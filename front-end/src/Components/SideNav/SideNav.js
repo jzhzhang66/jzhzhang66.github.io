@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 class SideNav extends React.Component {
     constructor(props) {
@@ -56,10 +57,11 @@ class SideNav extends React.Component {
     }
 
     render() {
+
         return (
-            <nav className={this.props.openNav ? "side-nav" : ""} style={this.props.openNav ? {opacity:'60%'} : {opcaity: '0%'}}>
+            <motion.nav initial={{x: -700}} animate={{x: 0}} transition={{duration: 2}} className={this.props.openNav ? "side-nav" : ""} style={this.props.openNav ? {opacity:'60%'} : {opacity: '0%'}}>
                 {this.props.openNav ? this.toRender() : ""}
-            </nav>
+            </motion.nav>
         )
     }
 }

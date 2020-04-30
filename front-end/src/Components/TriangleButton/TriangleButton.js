@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import {Link} from 'react-router-dom';
+import { motion } from "framer-motion";
 
 class TriangleButton extends React.Component {
 
@@ -16,7 +17,9 @@ class TriangleButton extends React.Component {
             albumLink = "/Gallery/Urban/Photos"
         }
         return (
-            <Link to={albumLink} className="triangle-button" />
+            <motion.div initial={{y: 20}} animate={{y: 0}} transition={{loop: Infinity, duration: 1.25}} >
+            <Link to={albumLink} className="triangle-button"/>
+            </motion.div>
         )
     }
 }
