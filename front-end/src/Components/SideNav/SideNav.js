@@ -5,15 +5,17 @@ import { motion } from "framer-motion";
 
 const sideNavVariants = {
     open: { 
-        opacity: .7
-         
+        opacity: .7,
+        x: 0,
+        transition: {
+            duration: 1
+        }
     },
     closed: { 
-        opacity: 0 
+        opacity: 0,
+        x: "-40%"
     }
 }
-
-    //initial={{x: -700}} animate={{x: 0}} transition={{duration: 2}}
 
 class SideNav extends React.Component {
     constructor(props) {
@@ -36,13 +38,13 @@ class SideNav extends React.Component {
         return (
             <ul>
                 <Link to="/Gallery/Urban">
-                    <li className="drop-down">Urban</li>
+                    <motion.li whileHover={{scale: 1.2, x: 15}} whileTap={{ scale: 0.95 }} className="drop-down">Urban</motion.li>
                 </Link>
                 <Link to="/Gallery/Landscape">
-                    <li className="drop-down">Landscape</li>
+                    <motion.li whileHover={{scale: 1.2, x: 15}} whileTap={{ scale: 0.95 }} className="drop-down">Landscape</motion.li>
                 </Link>
                 <Link to="/Gallery/Portrait">
-                    <li className="drop-down">Portrait</li>
+                    <motion.li whileHover={{scale: 1.2, x: 15}} whileTap={{ scale: 0.95 }} className="drop-down">Portrait</motion.li>
                 </Link>
             </ul>
         )
@@ -52,17 +54,17 @@ class SideNav extends React.Component {
         return (
             <ul>
                 <Link to="/">
-                    <li>Home</li>
+                    <motion.li whileHover={{scale: 1.1, x: 15}} whileTap={{ scale: 0.95 }}>Home</motion.li>
                 </Link>
                 <Link to="/AboutMe">
-                    <li>About Me</li>
+                    <motion.li whileHover={{scale: 1.1, x: 15}} whileTap={{ scale: 0.95 }}>About Me</motion.li>
                 </Link>
                 <Link onClick={this.toggleDropdown}>
-                    <li>Gallery</li>
+                    <motion.li whileHover={{scale: 1.1, x: 15}} whileTap={{ scale: 0.95 }}>Gallery</motion.li>
                     {this.state.openDropdown ? this.dropDown() : ""}
                 </Link>
                 <Link to="/Contact">
-                    <li>Contact</li>
+                    <motion.li whileHover={{scale: 1.1, x: 15}} whileTap={{ scale: 0.95 }}>Contact</motion.li>
                 </Link>
             </ul>
         )
