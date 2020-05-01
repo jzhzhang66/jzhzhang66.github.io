@@ -7,19 +7,20 @@ import Landscape from './Components/Options/Gallery/Landscape';
 import Portrait from './Components/Options/Gallery/Portrait';
 import Urban from './Components/Options/Gallery/Urban';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import axios from 'axios'
 import LandscapePhotos from './Components/Options/Gallery/Photos/LandscapePhotos';
 import PortraitPhotos from './Components/Options/Gallery/Photos/PortraitPhotos';
 import UrbanPhotos from './Components/Options/Gallery/Photos/UrbanPhotos';
+import { AnimatePresence, motion } from 'framer-motion';
 
 class App extends Component {
 
   render() {
     return (
-        <div style={{ height: '100%' }}>
-          <head>
-            <title>Judy Zhang</title>
-          </head>
+      <div style={{ height: '100%' }}>
+        <head>
+          <title>Judy Zhang</title>
+        </head>
+        <AnimatePresence>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/AboutMe" component={AboutMe} />
@@ -31,7 +32,8 @@ class App extends Component {
             <Route path="/Gallery/Portrait/Photos" component={PortraitPhotos} />
             <Route path="/Gallery/Urban/Photos" component={UrbanPhotos} />
           </Switch>
-        </div>
+        </AnimatePresence>
+      </div>
     );
   }
 }
