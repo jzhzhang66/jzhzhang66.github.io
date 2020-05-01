@@ -1,11 +1,24 @@
 import React from 'react';
 import '../../App.css';
+import { motion } from "framer-motion";
+
+const backdropVariants = {
+    open: {
+        opacity: .5,
+        transition: {
+            duration: 1
+        }
+    },
+    closed: {
+        opacity: 0,
+    }
+}
 
 class Backdrop extends React.Component {
 
     render() {
         return (
-            <div className={this.props.openBackdrop ? "backdrop" : ""} onClick={this.props.handleBackdropClick}/>
+            <motion.div variants={backdropVariants} className={this.props.openBackdrop ? "backdrop" : ""} onClick={this.props.handleBackdropClick}/>
         )
     }
 }
