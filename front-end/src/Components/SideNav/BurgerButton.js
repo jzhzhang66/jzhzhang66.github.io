@@ -51,7 +51,7 @@ class BurgerButton extends React.Component {
 
     render() {
         return (
-            <div >
+            <motion.div initial={false} animate={this.state.openNav ? "open" : "closed"}>
                 <motion.button whileHover={{ scale: 1.3 }} className={this.state.openNav ? "burger-button-hidden" : "burger-button"}
                     onClick={this.burgerButtonClicked}
                     onMouseOver={this.burgerButtonHover}
@@ -64,7 +64,7 @@ class BurgerButton extends React.Component {
                 </motion.button>
                 <SideNav openNav={this.state.openNav} />
                 <Backdrop openBackdrop={this.state.openNav} handleBackdropClick={this.handleBackdropClick.bind(this)}/>
-            </div>
+            </motion.div>
         )
     }
 }

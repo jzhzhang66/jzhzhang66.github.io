@@ -3,6 +3,18 @@ import '../../App.css';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 
+const sideNavVariants = {
+    open: { 
+        opacity: .7
+         
+    },
+    closed: { 
+        opacity: 0 
+    }
+}
+
+    //initial={{x: -700}} animate={{x: 0}} transition={{duration: 2}}
+
 class SideNav extends React.Component {
     constructor(props) {
         super(props);
@@ -57,9 +69,8 @@ class SideNav extends React.Component {
     }
 
     render() {
-
         return (
-            <motion.nav initial={{x: -700}} animate={{x: 0}} transition={{duration: 2}} className={this.props.openNav ? "side-nav" : ""} style={this.props.openNav ? {opacity:'60%'} : {opacity: '0%'}}>
+            <motion.nav variants={sideNavVariants} className={this.props.openNav ? "side-nav" : ""} style={this.props.openNav ? {opacity:'60%'} : {opacity: '0%'}}>
                 {this.props.openNav ? this.toRender() : ""}
             </motion.nav>
         )
