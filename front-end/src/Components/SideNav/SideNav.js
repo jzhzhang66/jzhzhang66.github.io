@@ -16,6 +16,7 @@ const sideNavVariants = {
         x: "-40%"
     }
 }
+  
 
 class SideNav extends React.Component {
     constructor(props) {
