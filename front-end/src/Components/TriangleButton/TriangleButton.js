@@ -17,7 +17,7 @@ class TriangleButton extends React.Component {
             albumLink = "/Gallery/Urban/Photos"
         }
         return (
-            <motion.div initial={{y: 20}} animate={{y: 0}} transition={{loop: Infinity, duration: 1.25}} >
+            <motion.div  animate={{y: [0, 5, 10, 5, 0]}} transition={{loop: Infinity, duration: 1}} >
             <Link to={albumLink} className="triangle-button"/>
             </motion.div>
         )
