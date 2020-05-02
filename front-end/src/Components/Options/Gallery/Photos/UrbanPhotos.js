@@ -3,7 +3,8 @@ import '../../../../App.css';
 import BurgerButton from '../../../SideNav/BurgerButton';
 import { getPhotoLinks } from '../../../../utils';
 import JustifiedGrid from 'react-justified-grid';
-import Loading from '../../../Loading/Loading';;
+import Loading from '../../../Loading/Loading';
+import { motion } from 'framer-motion';
 
 class UrbanPhotos extends React.Component {
 
@@ -28,14 +29,14 @@ class UrbanPhotos extends React.Component {
 
     toRender() {
         return (
-            <div >
+            <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}}>
                 <BurgerButton />
                 <JustifiedGrid
                     images={this.state.images}
                     rows={10000}
                     maxRowHeight={900}
                     gutter={1} />
-            </div>
+            </motion.div>
         )
     };
     render() {
