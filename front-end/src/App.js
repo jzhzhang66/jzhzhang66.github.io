@@ -20,7 +20,6 @@ class App extends Component {
         <head>
           <title>Judy Zhang</title>
         </head>
-        <AnimatePresence>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/AboutMe" component={AboutMe} />
@@ -32,7 +31,6 @@ class App extends Component {
             <Route path="/Gallery/Portrait/Photos" component={PortraitPhotos} />
             <Route path="/Gallery/Urban/Photos" component={UrbanPhotos} />
           </Switch>
-        </AnimatePresence>
       </div>
     );
   }

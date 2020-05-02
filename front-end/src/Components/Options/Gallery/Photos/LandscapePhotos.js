@@ -25,7 +25,7 @@ class LandscapePhotos extends React.Component {
 
     render() {
         return (
-            <div>
+            <div >
                 <BurgerButton />
                 <JustifiedGrid
                     images={this.state.images}

@@ -51,7 +51,7 @@ class BurgerButton extends React.Component {
 
     render() {
         return (
-            <motion.div initial={false} animate={this.state.openNav ? "open" : "closed"}>
+            <motion.div initial={false} animate={this.state.openNav ? "open" : "closed"} className="burger-button">
                 <motion.button whileHover={{ scale: 1.3 }} className={this.state.openNav ? "burger-button-hidden" : "burger-button"}
                     onClick={this.burgerButtonClicked}
                     onMouseOver={this.burgerButtonHover}
