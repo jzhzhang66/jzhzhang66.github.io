@@ -10,8 +10,8 @@ class Contact extends React.Component {
             <div>
                 <BurgerButton />
                 <div className="contact-div">
-                    <motion.h1 initial={{ x: -800, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 2, ease: "easeOut" }} className="contact-header">Contact</motion.h1>
-                    <motion.div initial={{ x: 800, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 2, ease: "easeOut" }}>
+                    <motion.h1 initial={{opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 2}} className="contact-header">Contact</motion.h1>
+                    <motion.div initial={{opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 2}}>
                         <a>zhang.jud@husky.neu.edu</a>
                         <br></br>
                         <a>(201)-665-0678</a>
