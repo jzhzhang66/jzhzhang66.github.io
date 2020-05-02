@@ -37,13 +37,12 @@ const itemVariants = {
 
 const menuVariants = {
     open: {
-        transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+        transition: { staggerChildren: 0.15, delayChildren: 0.2 }
     },
     closed: {
         transition: { staggerChildren: 0.05, staggerDirection: -1 }
     }
 };
-
 
 class SideNav extends React.Component {
     constructor(props) {
@@ -64,17 +63,17 @@ class SideNav extends React.Component {
 
     dropDown() {
         return (
-            <ul>
+            <motion.ul >
                 <Link to="/Gallery/Urban">
-                    <motion.li whileHover={{ scale: 1.2, x: 15 }} whileTap={{ scale: 0.95 }} className="drop-down">Urban</motion.li>
+                    <motion.li initial={{y: -50}} animate={{y: 0}} transition={{duration: 1}} whileHover={{ scale: 1.2, x: 15 }} whileTap={{ scale: 0.95 }} className="drop-down">Urban</motion.li>
                 </Link>
                 <Link to="/Gallery/Landscape">
-                    <motion.li whileHover={{ scale: 1.2, x: 15 }} whileTap={{ scale: 0.95 }} className="drop-down">Landscape</motion.li>
+                    <motion.li initial={{y: -75}} animate={{y: 0}} transition={{duration: .75}} whileHover={{ scale: 1.2, x: 15 }} whileTap={{ scale: 0.95 }} className="drop-down">Landscape</motion.li>
                 </Link>
                 <Link to="/Gallery/Portrait">
-                    <motion.li whileHover={{ scale: 1.2, x: 15 }} whileTap={{ scale: 0.95 }} className="drop-down">Portrait</motion.li>
+                    <motion.li initial={{y: -100}} animate={{y: 0}} transition={{duration: .5}} whileHover={{ scale: 1.2, x: 15 }} whileTap={{ scale: 0.95 }} className="drop-down">Portrait</motion.li>
                 </Link>
-            </ul>
+            </motion.ul>
         )
     }
 
