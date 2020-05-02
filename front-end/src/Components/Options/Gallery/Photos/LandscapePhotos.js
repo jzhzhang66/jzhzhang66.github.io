@@ -2,14 +2,16 @@ import React from 'react';
 import '../../../../App.css';
 import BurgerButton from '../../../SideNav/BurgerButton';
 import { getPhotoLinks } from '../../../../utils';
-import JustifiedGrid from 'react-justified-grid'
+import JustifiedGrid from 'react-justified-grid';
+import Loading from '../../../Loading/Loading';
 
 class LandscapePhotos extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            images: []
+            images: [],
+            loading: true
         }
     }
 
@@ -17,13 +19,14 @@ class LandscapePhotos extends React.Component {
         getPhotoLinks('landscape').then((res) => {
             this.setState(() => {
                 return {
-                    images: res
+                    images: res,
+                    loading: false
                 }
             })
         })
     }
 
-    render() {
+    toRender() {
         return (
             <div >
                 <BurgerButton />
@@ -35,6 +38,13 @@ class LandscapePhotos extends React.Component {
             </div>
         )
     };
+    render() {
+        return (
+            <div>
+                {this.state.loading ? <Loading /> : this.toRender()}
+            </div>
+        )
+    }
 }
 
 export default LandscapePhotos;

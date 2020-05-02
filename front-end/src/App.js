@@ -10,7 +10,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import LandscapePhotos from './Components/Options/Gallery/Photos/LandscapePhotos';
 import PortraitPhotos from './Components/Options/Gallery/Photos/PortraitPhotos';
 import UrbanPhotos from './Components/Options/Gallery/Photos/UrbanPhotos';
-import { AnimatePresence, motion } from 'framer-motion';
 
 class App extends Component {
 

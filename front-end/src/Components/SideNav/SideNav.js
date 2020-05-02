@@ -14,7 +14,7 @@ const sideNavVariants = {
     closed: {
         opacity: 0,
         x: "-40%", 
-        display: 'none'
+        display: 'none',
     }
 }
 
@@ -52,6 +52,17 @@ class SideNav extends React.Component {
         }
         this.toggleDropdown = this.toggleDropdown.bind(this);
     }
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (!nextProps.openNav) {
+            return {
+                openDropdown: false
+            }
+        }
+        else {
+            return null;
+        }
+        }
 
     toggleDropdown() {
         this.setState(() => {

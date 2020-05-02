@@ -246,3 +246,12 @@ body {
 	top: 40em;
 	left: 43em;
 }
+
+.loading {
+	font-size: 4em;
+	padding-left: 38%;
+	padding-top: 20%;
+	font-family: 'Playfair Display SC', serif;
+	color: grey;
+	display: flex;
+}
