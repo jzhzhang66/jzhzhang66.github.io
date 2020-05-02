@@ -13,7 +13,8 @@ const sideNavVariants = {
     },
     closed: {
         opacity: 0,
-        x: "-40%"
+        x: "-40%", 
+        display: 'none'
     }
 }
 
