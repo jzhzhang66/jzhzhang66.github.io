@@ -27,7 +27,7 @@ class Landscape extends React.Component {
                 <BurgerButton />
                 <div className="landscape-container">
                     <img src={LandscapeCover} alt="" />
-                    <h1>NATURE</h1>
+                    <h1>LANDSCAPE</h1>
                 </div>
                 <TriangleButton album="Landscape"/>
             </motion.div>

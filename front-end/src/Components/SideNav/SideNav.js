@@ -79,7 +79,7 @@ class SideNav extends React.Component {
                     <motion.li initial={{y: -50}} animate={{y: 0}} transition={{duration: 1}} whileHover={{ scale: 1.2, x: 15 }} whileTap={{ scale: 0.95 }} className="drop-down">Urban</motion.li>
                 </Link>
                 <Link to="/Gallery/Landscape">
-                    <motion.li initial={{y: -75}} animate={{y: 0}} transition={{duration: .75}} whileHover={{ scale: 1.2, x: 15 }} whileTap={{ scale: 0.95 }} className="drop-down">Landscape</motion.li>
+                    <motion.li initial={{y: -75}} animate={{y: 0}} transition={{duration: .75}} whileHover={{ scale: 1.2, x: 15 }} whileTap={{ scale: 0.95 }} className="drop-down">Nature</motion.li>
                 </Link>
                 <Link to="/Gallery/Portrait">
                     <motion.li initial={{y: -100}} animate={{y: 0}} transition={{duration: .5}} whileHover={{ scale: 1.2, x: 15 }} whileTap={{ scale: 0.95 }} className="drop-down">Portrait</motion.li>
